@@ -1029,10 +1029,9 @@
   align-items: center;
   padding-left: 40px;
   padding-right: 40px;
-  padding-top: 40px;
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 100%;
   bottom: auto;
   left: 0;
   right: auto;
