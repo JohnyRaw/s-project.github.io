@@ -1,0 +1,301 @@
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+nav ul li {
+display: inline;
+margin-right: 10px;
+/* Расстояние между элементами меню */
+}
+
+nav ul li a,
+nav ul li button {
+position: relative;
+text-decoration: none;
+padding-bottom: 5px;
+/* Расстояние от текста до полоски */
+transition: all 0.3s ease-in-out;
+border: none;
+background: none;
+cursor: pointer;
+outline: none;
+}
+
+nav ul li a::after,
+nav ul li button::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 2px;
+/* Высота полоски */
+background-color: #007BFF;
+/* Цвет полоски */
+transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after,
+nav ul li button:hover::after {
+width: 100%;
+}
+
+.contacts__contacts-forms {
+max-width: 1780px;
+margin: 0 auto;
+padding: 40px;
+background-color: transparent;
+border-radius: 40px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+display: block;
+color: #A7A7A7;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+width: 100%;
+padding: 25px 23px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+textarea {
+width: 100%;
+padding: 25px 23px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 4px;
+min-height: 120px;
+resize: none;
+}
+
+.get-in-touch {
+background-color: #217191;
+/* Button's blue color */
+border: none;
+border-radius: 45px;
+/* Rounded corners */
+color: #ffffff;
+/* Text color */
+cursor: pointer;
+font-size: 24px;
+/* Font size for the button text */
+height: 90px;
+/* Height of the button */
+width: 639.52px;
+/* Width of the button */
+margin-top: 20px;
+/* Space above the button */
+margin-bottom: 20px;
+/* Space below the button */
+position: relative;
+/* For inner circle positioning */
+overflow: hidden;
+/* Clip inner circle overflow */
+transition: background-color 0.3s ease;
+/* Smooth color transition */
+}
+
+.get-in-touch:hover {
+background-color: #0056b3;
+/* Slightly darker blue on hover */
+}
+
+.get-in-touch:active {
+top: 3px;
+box-shadow: 0 2px 0 #161b13;
+}
+
+.get-in-touch::before {
+content: "";
+/* Empty content */
+position: absolute;
+/* Absolute positioning */
+top: 50%;
+/* Centered vertically */
+left: -50%;
+/* Start from the left */
+transform: translateY(-50%);
+/* Vertical centering adjustment */
+background-color: rgba(255, 255, 255, 0.1);
+/* White color with some transparency */
+width: 45px;
+/* Width of the inner circle */
+height: 45px;
+/* Height of the inner circle */
+border-radius: 50%;
+/* Makes it a circle */
+animation: moveCircle 2s infinite;
+/* Animation */
+}
+
+input .get-in-touch @keyframes moveCircle {
+0% {
+    left: -50%;
+    /* Start from the left */
+}
+
+50% {
+    left: 110%;
+    /* Move to the right */
+}
+
+100% {
+    left: -50%;
+    /* Return to start */
+}
+}
+
+.contacts__contacts-text {
+display: flex;
+flex-direction: column;
+gap: 60px;
+}
+
+/* Your existing styles remain here */
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+.contacts__contacts-forms {
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.get-in-touch {
+    width: 80%;
+    /* Adjust the button width for tablets */
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+/* Horizontal Phone (Landscape) Styles */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+.contacts__contacts-forms {
+    padding: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 12px 18px;
+    margin-bottom: 10px;
+}
+
+.get-in-touch {
+    width: 90%;
+    /* Adjust the button width for landscape mode */
+    height: 70px;
+    /* Adjust button height */
+    font-size: 20px;
+    /* Adjust font size */
+}
+}
+
+/* Vertical Phone (Portrait) Styles */
+@media screen and (max-width: 480px) {
+.contacts__contacts-forms {
+    padding: 10px;
+}
+
+label {
+    font-size: 14px;
+    /* Adjust label font size */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.get-in-touch {
+    width: 100%;
+    /* Make the button full width */
+    height: 60px;
+    /* Adjust button height */
+    font-size: 18px;
+    /* Adjust font size */
+}
+
+.contacts__contacts-text {
+    gap: 30px;
+    /* Reduce the gap */
+}
+
+.contacts__directly {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+}
+
+.form__body {
+position: relative;
+}
+
+.form__body::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(51, 51, 51, 0.9) url(../img/loading.gif) center / 50px no-repeat;
+opacity: 0;
+visibility: hidden;
+transition: all 0.5s ease 0s;
+}
+
+.form__body._sending {
+opacity: 1;
+visibility: visible;
+}
+
+.whychooseus__cta-logo-text {
+    word-wrap: normal;
+}
+
+.whychooseus__answer-cta-logo-text {
+    word-break: normal;
+}
+
+@media screen and (max-width: 479px) {
+    .services__block-text {
+        display: flex;
+        gap: 20px;
+    }
+    .whychooseus__answer-cta-logo-text {
+        display: flex;
+        vertical-align: auto;
+        flex-direction: column;
+        align-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .grid-cell__title {
+        white-space: normal;
+    }
+    .grid-cell__description {
+        white-space: normal;
+    }
+    .slide-sertificate-content {
+        display: flex;
+        gap: 20px;
+    }
+}
