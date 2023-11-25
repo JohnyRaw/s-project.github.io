@@ -294,8 +294,7 @@ visibility: visible;
     .grid-cell__description {
         white-space: normal;
     }
-    .slide-sertificate-content {
-        display: flex;
-        gap: 20px;
+    .sertificate-description {
+        padding-bottom: 20px;
     }
 }
