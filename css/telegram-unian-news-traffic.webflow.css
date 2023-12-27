@@ -1,0 +1,223 @@
+:root {
+  --yellow: yellow;
+}
+
+.w-layout-grid {
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.all__content {
+  height: 100%;
+}
+
+.body {
+  color: #000;
+  background-color: #f8fff5;
+  font-family: Stolzl, sans-serif;
+}
+
+.logo {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.logo__text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.h2 {
+  margin-top: 0;
+  margin-bottom: 36px;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.color {
+  color: #0b73c4;
+}
+
+.grid {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-rows: auto auto;
+  grid-template-columns: .75fr;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+  background-color: #0b73c4;
+  border-radius: 5px;
+  padding: 20px 44px 22px;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all .555s;
+  box-shadow: 0 20px 18px -10px rgba(11, 115, 196, .44);
+}
+
+.btn:hover {
+  background-color: #43afdb;
+  transform: translate(0, -4px);
+  box-shadow: 0 30px 30px -10px rgba(27, 150, 201, .63);
+}
+
+.btn:active {
+  background-color: #0c749e;
+  transform: none;
+  box-shadow: 0 13px 12px -10px rgba(27, 150, 201, .63);
+}
+
+.h1 {
+  margin-top: 70px;
+  margin-bottom: 25px;
+  font-size: 45px;
+  line-height: 140%;
+}
+
+.img-cover {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.z {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  position: static;
+}
+
+.hero-section {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  .h2 {
+    text-align: center;
+  }
+
+  .left-side {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-right: 0;
+    display: flex;
+  }
+
+  .grid {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .h1 {
+    text-align: center;
+    margin-top: 30px;
+    padding-left: 0;
+    font-size: 45px;
+  }
+
+  .z {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .h2 {
+    font-size: 19px;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+
+  .h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .hero-section {
+    padding-bottom: 20px;
+  }
+}
+
+
+@font-face {
+  font-family: 'Stolzl Book';
+  src: url('../fonts/stolzl_book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Stolzl';
+  src: url('../fonts/stolzl_bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Stolzl';
+  src: url('../fonts/stolzl_medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Stolzl';
+  src: url('../fonts/stolzl_regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Stolzl';
+  src: url('../fonts/stolzl_light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Stolzl';
+  src: url('../fonts/stolzl_thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
